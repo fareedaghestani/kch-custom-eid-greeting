@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=768, initial-scale=1.0">
+  <title>Eid Mubarak Card Generator</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+      <!-- Page 1: Input -->
+      <div id="inputPage">
+        <h1>KCH Eid Mubarak Card</h1>
+        <input type="text" id="nameInput" placeholder="Enter your name" maxlength="30">
+        <button id="generateBtn">Generate Card</button>
+      </div>
+      <!-- Page 2: Card & Download -->
+      <div id="cardPage" style="display:none;">
+        <canvas id="eidCardCanvas" width="768" height="768"></canvas>
+        <br>
+        <button id="downloadBtn">Download Card</button>
+        <button id="backBtn" style="margin-left: 10px;">Back</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

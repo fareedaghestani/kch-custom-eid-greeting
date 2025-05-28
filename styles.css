@@ -1,0 +1,130 @@
+ /* CSS Styles */
+ :root {
+  --navy: #14213d;
+  --white: #ffffff; /* White container */
+  --navy-light: #22305a;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+body {
+  background: var(--navy);
+  color: var(--navy);
+  font-family: 'Montserrat', Arial, sans-serif; /* Use Montserrat */
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: var(--white);
+  border: 2px solid var(--navy);
+  box-shadow: 0 4px 24px rgba(20, 33, 61, 0.10);
+  padding: 36px 24px 28px 24px;
+  max-width: 370px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in; /* Fade-in animation for the container */
+}
+
+h1 {
+  font-family: 'Cairo', Arial, sans-serif;
+  color: var(--navy);
+  font-size: 2em;
+  margin-bottom: 20px; /* Adjusted margin */
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--navy);
+  padding-bottom: 12px;
+  margin-top: -10px; /* Move title a little bit up */
+}
+
+input[type="text"] {
+  padding: 12px 14px;
+  font-size: 1.05em;
+  border: 2px solid var(--navy-light);
+  margin-bottom: 22px;
+  width: 90%;
+  max-width: 230px;
+  background: #fff;
+  color: var(--navy);
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: none;
+}
+input[type="text"]:focus {
+  border: 2px solid var(--navy);
+  box-shadow: 0 2px 8px rgba(20, 33, 61, 0.10);
+}
+
+button {
+  padding: 12px 28px;
+  font-size: 1em;
+  border: 2px solid var(--navy);
+  background: var(--navy);
+  color: var(--white); /* Button text color */
+  margin: 12px 8px 0 8px;
+  cursor: pointer;
+  font-family: 'Montserrat', Arial, sans-serif; /* Use Montserrat */
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s, transform 0.3s; /* Add transform transition */
+}
+button:hover, button:focus {
+  background: var(--white);
+  color: var(--navy);
+  border: 2px solid var(--navy-light);
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+canvas {
+  margin-top: 18px;
+  background: #fff;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: none; /* Removed border */
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-in; /* Smooth transition for canvas */
+}
+
+.card-visible {
+  opacity: 1; /* Fully visible when the class is added */
+}
+
+@media (max-width: 500px) {
+  .container {
+      padding: 14px 5%;
+      max-width: 90%;
+  }
+  h1 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+  }
+  input[type="text"] {
+      font-size: 1em;
+      padding: 10px;
+      width: 100%; /* Full width */
+  }
+  button {
+      font-size: 1em;
+      padding: 10px 15px;
+      width: 100%; /* Full width */
+      margin: 10px 0; /* Space between buttons */
+  }
+  canvas {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto; /* Centering */
+  }
+}
