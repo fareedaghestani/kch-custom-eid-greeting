@@ -9,13 +9,12 @@ const cardPage = document.getElementById('cardPage');
 
 const cardImage = new Image();
 cardImage.src = 'Eid-Mubarak.png';
-
 function drawCard(name = '') {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(cardImage, 0, 0, canvas.width, canvas.height);
   
     if (name) {
-        ctx.font = 'bold 40px "Montserrat", Arial, sans-serif'; // Use Montserrat font
+        ctx.font = 'bold 30px "Tajawal", Arial, sans-serif'; // Use Tajawal font and smaller size
         ctx.fillStyle = '#14213d'; // Navy text color
         ctx.textAlign = 'center';
         const textY = canvas.height / 2 + (canvas.height * 0.2); // 20% below center
